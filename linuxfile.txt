@@ -1,0 +1,159 @@
+scp
+lsblk lists information about all available or the specified block devices. 
+tar -xvzf  or zip or unzip
+tar -cvzf
+crontab -e
+crontab -l
+telnet ip port
+ping
+df -h  df command provides options to display disk space information in different formats.
+‘-h’ or ‘–human-readable’	Prints sizes in a human-readable format using power of 1024.
+
+netstat -lntp
+shutdown now
+shutdown 20:40
+ps  Linux is a powerful tool that allows you to view information about the processes running on your Linux system. It stands for “process status” 
+-e: This option tells ps to display information about every process currently running on the system.
+-f: This stands for "full-format listing," which means the output will include a wide range of details about each process.
+
+ps aux These commands are essential for system administrators to monitor and manage the system's performance and resources effectively in real-time.
+find: Searches for files and directories in a directory hierarchy.  find /path/to/search -name "file_name"
+less: Views file content one screen at a time.  less file_name
+more: Views file content with pagination. more file_name
+head head: Displays the first few lines of a file.
+tail: Displays the last few lines of a file.  tail -n filename
+nano vim vi 
+uname -a: Displays system information.
+uptime: Displays system uptime.
+chown user:group file_name  chown: Changes file or directory ownership.
+sudo usermod -aG group_name user_name usermod: Modifies a user account.
+
+netstat or ss: Displays network connections.
+netstat -tulnp
+ss -tulnp
+
+scp file_name user@remote_host:/path/to/destination
+ssh: Connects to a remote host. ssh user@remote_host
+apt-get (Debian/Ubuntu): Manages packages. 
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install package_name
+yum (CentOS/RHEL): Manages packages.
+sudo yum update
+sudo yum install package_name
+dnf (Fedora): Manages packages.
+sudo dnf update
+sudo dnf install package_name
+
+1. Web Server:
+Role: The web server is responsible for serving static content (e.g., HTML, CSS, JavaScript files) and handling HTTP requests from clients (such as web browsers).
+Functionality: It receives requests from clients, processes them, and returns appropriate responses, typically in the form of web pages or resources.
+Example: Apache HTTP Server, Nginx, Microsoft Internet Information Services (IIS).
+Use Cases: Serving static content, handling client requests, load balancing, and caching.
+2. Application Server:
+Role: The application server is responsible for executing application logic and processing dynamic content generation. It often acts as an intermediary between the client and the database server.
+Functionality: It executes code written in programming languages (e.g., Java, Python, Node.js) to perform business logic, access databases, and generate dynamic content.
+Example: Apache Tomcat, JBoss/Wildfly, IBM WebSphere, Microsoft .NET Framework.
+Use Cases: Executing business logic, processing user input, interacting with databases, managing session state.
+3. Database Server:
+Role: The database server is responsible for storing, managing, and retrieving data used by the application. It provides a structured mechanism for storing and organizing data.
+Functionality: It receives requests to store, retrieve, update, or delete data and executes database queries or operations accordingly.
+Example: MySQL, PostgreSQL, Oracle Database, MongoDB, Microsoft SQL Server.
+Use Cases: Storing application data, managing data integrity, executing database queries, ensuring data security and access control.
+Interaction:
+Clients (e.g., web browsers) send HTTP requests to the web server.
+The web server may serve static content directly or delegate dynamic content requests to the application server.
+The application server executes application logic, interacts with the database server if necessary, and generates dynamic content.
+The database server handles database operations, such as storing and retrieving data, in response to requests from the application server.
+Key Differences:
+Web Server vs. Application Server: Web servers primarily serve static content and handle HTTP requests, while application servers execute application logic and generate dynamic content.
+Application Server vs. Database Server: Application servers execute application logic and interact with databases, while database servers store, manage, and retrieve data used by the application.
+
+
+httpd
+
+vi /var/www/html/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container img {
+            max-width: 100px;
+            margin-bottom: 20px;
+        }
+        .login-container h2 {
+            margin: 0 0 20px;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <img src="devops-logo.png" alt="DevOps Logo">
+    <h2>Login</h2>
+    <div id="error-message" class="error-message"></div>
+    <form id="login-form" action="http://localhost:3000/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+
