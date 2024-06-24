@@ -1,4 +1,4 @@
-scp
+iiiihhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhscp
 lsblk lists information about all available or the specified block devices. 
 tar -xvzf  or zip or unzip
 tar -cvzf
